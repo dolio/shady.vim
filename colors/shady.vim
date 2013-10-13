@@ -18,88 +18,89 @@ endif
 let colors_name = "shady"
 
 " General colors
-hi Normal               ctermfg=NONE        ctermbg=NONE        cterm=NONE
-hi NonText              ctermfg=black       ctermbg=NONE        cterm=NONE
+hi Normal  ctermfg=NONE  guifg=white ctermbg=NONE guibg=black cterm=NONE gui=NONE
+hi NonText ctermfg=black guifg=black ctermbg=NONE guibg=black cterm=NONE gui=NONE
 
-hi Cursor               ctermfg=black       ctermbg=white       cterm=reverse
-hi LineNr               ctermfg=235         ctermbg=NONE        cterm=NONE
+hi Cursor  ctermfg=black guifg=black   ctermbg=white guibg=white cterm=reverse gui=NONE
+hi LineNr  ctermfg=235   guifg=#262626 ctermbg=NONE  guibg=black cterm=NONE    gui=NONE
 
-hi VertSplit            ctermfg=236         ctermbg=NONE        cterm=NONE
-hi StatusLine           ctermfg=238         ctermbg=NONE        cterm=NONE
-hi StatusLineNC         ctermfg=236         ctermbg=NONE        cterm=NONE
+hi VertSplit    ctermfg=236 guifg=#303030 ctermbg=NONE guibg=black cterm=NONE gui=NONE
+hi StatusLine   ctermfg=238 guifg=#444444 ctermbg=NONE guibg=black cterm=NONE gui=NONE
+hi StatusLineNC ctermfg=236 guifg=#303030 ctermbg=NONE guibg=black cterm=NONE gui=NONE
 
-hi Folded               ctermfg=NONE        ctermbg=NONE        cterm=NONE
-hi Title                ctermfg=NONE        ctermbg=NONE        cterm=BOLD
-hi Visual               ctermfg=NONE        ctermbg=52          cterm=NONE
+hi Folded ctermfg=NONE guifg=white ctermbg=NONE guibg=black   cterm=NONE gui=NONE
+hi Title  ctermfg=NONE guifg=white ctermbg=NONE guibg=black   cterm=BOLD gui=BOLD
+hi Visual ctermfg=NONE guifg=white ctermbg=52   guibg=#5f0000 cterm=NONE gui=NONE
 
-hi SpecialKey           ctermfg=NONE        ctermbg=NONE        cterm=NONE
+hi SpecialKey ctermfg=NONE guifg=#1c1c1c ctermbg=NONE guibg=black cterm=NONE gui=NONE
 
-hi WildMenu             ctermfg=black       ctermbg=yellow      cterm=NONE
-hi PmenuSbar            ctermfg=black       ctermbg=white       cterm=NONE
+hi WildMenu  ctermfg=black guibg=black ctermbg=yellow guibg=yellow cterm=NONE gui=NONE
+hi PmenuSbar ctermfg=black guibg=black ctermbg=white  guibg=white  cterm=NONE gui=NONE
 
-hi Error                ctermfg=NONE        ctermbg=red         cterm=NONE
-hi ErrorMsg             ctermfg=NONE        ctermbg=52          cterm=NONE
-hi WarningMsg           ctermfg=NONE        ctermbg=172         cterm=NONE
+hi Error      ctermfg=NONE guifg=white ctermbg=red guifg=red     cterm=NONE gui=NONE
+hi ErrorMsg   ctermfg=NONE guifg=white ctermbg=52  guifg=#5f0000 cterm=NONE gui=NONE
+hi WarningMsg ctermfg=NONE guifg=white ctermbg=172 guifg=#d78700 cterm=NONE gui=NONE
 
 " Message displayed in lower left, such as --INSERT--
-hi ModeMsg              ctermfg=238         ctermbg=NONE        cterm=bold
+hi ModeMsg ctermfg=238 guifg=#444444 ctermbg=NONE guibg=black cterm=bold gui=bold
 
 if version >= 700 " Vim 7.x specific colors
-  hi CursorLine         ctermfg=NONE        ctermbg=NONE        cterm=NONE
-  hi CursorColumn       ctermfg=NONE        ctermbg=NONE        cterm=BOLD
-  hi TabLine            ctermfg=238         ctermbg=NONE        cterm=NONE
-  hi TabLineFill        ctermfg=238         ctermbg=NONE        cterm=NONE
-  hi TabLineSel         ctermfg=NONE        ctermbg=NONE        cterm=BOLD
-  hi MatchParen         ctermfg=NONE        ctermbg=NONE        cterm=BOLD
-  hi Pmenu              ctermfg=NONE        ctermbg=235         cterm=NONE
-  hi PmenuSel           ctermfg=black       ctermbg=yellow      cterm=NONE
-  hi Search             ctermfg=yellow      ctermbg=NONE        cterm=REVERSE
+  hi CursorLine   ctermfg=NONE    guifg=NONE    ctermbg=233    guibg=#121212 cterm=NONE gui=NONE
+  hi CursorColumn ctermfg=NONE    guifg=white   ctermbg=NONE   guibg=black   cterm=BOLD gui=bold
+  hi TabLine      ctermfg=238     guifg=#444444 ctermbg=NONE   guibg=black   cterm=NONE gui=NONE
+  hi TabLineFill  ctermfg=238     guifg=#444444 ctermbg=NONE   guibg=black   cterm=NONE gui=NONE
+  hi TabLineSel   ctermfg=NONE    guifg=white   ctermbg=NONE   guibg=black   cterm=BOLD gui=bold
+  hi MatchParen   ctermfg=NONE    guifg=white   ctermbg=NONE   guibg=black   cterm=BOLD gui=bold
+  hi Pmenu        ctermfg=NONE    guifg=white   ctermbg=235    guibg=#262626 cterm=NONE gui=NONE
+  hi PmenuSel     ctermfg=black   guifg=black   ctermbg=yellow guibg=yellow  cterm=NONE gui=NONE
+  hi Search       ctermfg=yellow  guifg=black   ctermbg=NONE   guibg=yellow  cterm=REVERSE
+  hi IncSearch    ctermfg=171     guifg=#d75fff ctermbg=NONE   guibg=black   cterm=REVERSE
 endif
 
 " Syntax highlighting
-hi Comment              ctermfg=238        ctermbg=NONE        cterm=NONE
-hi SpecialComment       ctermfg=237        ctermbg=NONE        cterm=BOLD
-hi String               ctermfg=245        ctermbg=NONE        cterm=NONE
-hi Number               ctermfg=193        ctermbg=NONE        cterm=NONE
-hi Character            ctermfg=red        ctermbg=NONE        cterm=NONE
-hi PreProc              ctermfg=white      ctermbg=NONE        cterm=BOLD
-hi Operator             ctermfg=white      ctermbg=NONE        cterm=NONE
+hi Comment        ctermfg=238   guifg=#444444 ctermbg=NONE guibg=black cterm=NONE gui=NONE
+hi SpecialComment ctermfg=237   guifg=#3a3a3a ctermbg=NONE guibg=black cterm=BOLD gui=bold
+hi String         ctermfg=245   guifg=#8a8a8a ctermbg=NONE guibg=black cterm=NONE gui=NONE
+hi Number         ctermfg=193   guifg=#d7ffaf ctermbg=NONE guibg=black cterm=NONE gui=NONE
+hi Character      ctermfg=red   guifg=red     ctermbg=NONE guibg=black cterm=NONE gui=NONE
+hi PreProc        ctermfg=white guifg=white   ctermbg=NONE guibg=black cterm=BOLD gui=bold
+hi Operator       ctermfg=white guifg=white   ctermbg=NONE guibg=black cterm=NONE gui=NONE
 
-hi Keyword              ctermfg=white       ctermbg=NONE       cterm=BOLD
-hi Statement            ctermfg=white       ctermbg=NONE       cterm=BOLD
-hi Conditional          ctermfg=white       ctermbg=NONE       cterm=BOLD
+hi Keyword     ctermfg=white guifg=white ctermbg=NONE guibg=black cterm=BOLD gui=bold
+hi Statement   ctermfg=white guifg=white ctermbg=NONE guibg=black cterm=BOLD gui=bold
+hi Conditional ctermfg=white guifg=white ctermbg=NONE guibg=black cterm=BOLD gui=bold
 
-hi Todo                 ctermfg=240         ctermbg=NONE       cterm=BOLD
-hi Constant             ctermfg=white       ctermbg=NONE       cterm=BOLD
+hi Todo     ctermfg=240   guifg=#585858 ctermbg=NONE guibg=black cterm=BOLD gui=bold
+hi Constant ctermfg=white guifg=white   ctermbg=NONE guibg=black cterm=BOLD gui=bold
 
-hi Identifier           ctermfg=109         ctermbg=NONE       cterm=NONE
-hi Function             ctermfg=248         ctermbg=NONE       cterm=NONE
-hi Class                ctermfg=109         ctermbg=NONE       cterm=NONE
-hi Type                 ctermfg=109         ctermbg=NONE       cterm=BOLD
-hi Label                ctermfg=yellow      ctermbg=NONE       cterm=NONE
+hi Identifier ctermfg=109    guifg=#87afaf ctermbg=NONE guibg=black cterm=NONE gui=NONE
+hi Function   ctermfg=248    guifg=#a8a8a8 ctermbg=NONE guibg=black cterm=NONE gui=NONE
+hi Class      ctermfg=109    guifg=#87afaf ctermbg=NONE guibg=black cterm=NONE gui=NONE
+hi Type       ctermfg=109    guifg=#87afaf ctermbg=NONE guibg=black cterm=BOLD gui=bold
+hi Label      ctermfg=yellow guifg=yellow  ctermbg=NONE guibg=black cterm=NONE gui=NONE
 
-hi Special              ctermfg=red         ctermbg=NONE       cterm=NONE
-hi Delimiter            ctermfg=grey        ctermbg=NONE       cterm=NONE
+hi Special   ctermfg=red  guifg=red  ctermbg=NONE guibg=black cterm=NONE gui=NONE
+hi Delimiter ctermfg=grey guifg=grey ctermbg=NONE guibg=black cterm=NONE gui=NONE
 
-hi cIdentifier          ctermfg=255         ctermbg=NONE       cterm=NONE
-hi cFunction            ctermfg=109         ctermbg=NONE       cterm=NONE
-hi cStorageClass        ctermfg=255         ctermbg=NONE       cterm=BOLD
-hi cOperator            ctermfg=109         ctermbg=NONE       cterm=BOLD
-hi cPointerOperator     ctermfg=244         ctermbg=NONE       cterm=NONE
-hi cPreProc             ctermfg=240         ctermbg=NONE       cterm=BOLD
+hi cIdentifier      ctermfg=255 guifg=#eeeeee ctermbg=NONE guibg=black cterm=NONE gui=NONE
+hi cFunction        ctermfg=109 guifg=#87afaf ctermbg=NONE guibg=black cterm=NONE gui=NONE
+hi cStorageClass    ctermfg=255 guifg=#eeeeee ctermbg=NONE guibg=black cterm=BOLD gui=bold
+hi cOperator        ctermfg=109 guifg=#87afaf ctermbg=NONE guibg=black cterm=BOLD gui=bold
+hi cPointerOperator ctermfg=244 guifg=#808080 ctermbg=NONE guibg=black cterm=NONE gui=NONE
+hi cPreProc         ctermfg=240 guifg=#585858 ctermbg=NONE guibg=black cterm=BOLD gui=bold
 
 " Pandoc
-hi pdcCodeBlock         ctermfg=246         ctermbg=232        cterm=NONE
-hi pdcEmphasis	        ctermfg=NONE	    ctermbg=NONE       cterm=ITALIC
-hi pdcStrong  	        ctermfg=NONE	    ctermbg=NONE       cterm=BOLD
-hi pdcBlockquote  	    ctermfg=109	        ctermbg=NONE       cterm=ITALIC
+hi pdcCodeBlock  ctermfg=246  guifg=#949494 ctermbg=232  guibg=#080808 cterm=NONE   gui=NONE
+hi pdcEmphasis   ctermfg=NONE guifg=white   ctermbg=NONE guibg=black   cterm=ITALIC gui=italic
+hi pdcStrong     ctermfg=NONE guifg=white   ctermbg=NONE guibg=black   cterm=BOLD   gui=bold
+hi pdcBlockquote ctermfg=109  guifg=#87afaf ctermbg=NONE guibg=black   cterm=ITALIC gui=italic
 
-hi GreyBold             ctermfg=250         ctermbg=NONE       cterm=BOLD
+hi GreyBold ctermfg=250 guifg=#bcbcbc ctermbg=NONE guibg=black cterm=BOLD gui=bold
 
-hi link pdcCode pdcCodeBlock
+hi default link pdcCode pdcCodeBlock
 
 " Haskell
-hi hsType  	    ctermfg=248	        ctermbg=NONE       cterm=NONE
+hi default hsType ctermfg=248 guifg=#a8a8a8 ctermbg=NONE guibg=black cterm=NONE gui=NONE
 
 " C
 hi link cMacro          cIdentifier
@@ -143,9 +144,9 @@ hi link javaScriptStatement      Keyword " try catch throw with finally
 hi link javaScriptGlobalObjects  Class   " Array Boolean Date Function Infinity JavaArray JavaClass JavaObject JavaPackage Math Number NaN Object Packages RegExp String Undefined java netscape sun
 
 " Shell
-hi shCommandSub	    	ctermfg=white
-hi link shOperator 		String
-hi link shDeref   		Identifier
+hi shCommandSub    ctermfg=white guifg=white
+hi link shOperator String
+hi link shDeref    Identifier
 
 " Ruby
 hi link rubyControl           Keyword
